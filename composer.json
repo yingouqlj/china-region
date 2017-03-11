@@ -1,0 +1,20 @@
+{
+  "name": "yingouqlj/china-region",
+  "description": "china region 中国城市代码表",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "yingou",
+      "email": "yingouqlj@gmail.com"
+    }
+  ],
+  "require": {
+    "php":">=5.5.0"
+  },
+  "minimum-stability" : "dev",
+  "autoload": {
+    "psr-4": {
+      "Yingou\\ChinaRegion\\": "src/"
+    }
+  }
+}
