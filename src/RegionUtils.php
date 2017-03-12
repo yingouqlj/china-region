@@ -15,6 +15,10 @@ class RegionUtils
         return self::findFirst($areaCode, 'id');
     }
 
+    public static function findByTitle($areaName){
+        return self::findFirst($areaName, 'title');
+    }
+
     /**
      * @param $value
      * @param string $column
