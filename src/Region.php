@@ -50,14 +50,14 @@ class Region
      * 取省份
      * @return $this|bool
      */
-    public function province()
+    public function getProvince()
     {
         if ($this->parentId == self::DEFAULT_PARENT_ID) {
             return $this;
         }
         $parentArea = RegionUtils::findByCode($this->parentId);
         if ($parentArea) {
-            return $parentArea->province();
+            return $parentArea->getProvince();
         }
         return null;
     }
