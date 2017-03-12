@@ -77,9 +77,11 @@ class RegionTable
         ['id' => 120116, 'name' => '滨海', 'title' => '滨海新区', 'parent_id' => 120000],
         ['id' => 120117, 'name' => '宁河', 'title' => '宁河区', 'parent_id' => 120000],
         ['id' => 120118, 'name' => '静海', 'title' => '静海区', 'parent_id' => 120000],
+        ['id' => 120119, 'name' => '蓟州', 'title' => '蓟州区', 'parent_id' => 120000],
         ['id' => 120225, 'name' => '蓟县', 'title' => '蓟县', 'parent_id' => 120000],
         // 河北
         // 石家庄
+        ['id' => 130100, 'name' => '石家庄', 'title' => '石家庄市', 'parent_id' => 130100],
         ['id' => 130102, 'name' => '长安', 'title' => '长安区', 'parent_id' => 130100],
         ['id' => 130104, 'name' => '桥西', 'title' => '桥西区', 'parent_id' => 130100],
         ['id' => 130105, 'name' => '新华', 'title' => '新华区', 'parent_id' => 130100],

@@ -12,11 +12,11 @@ class RegionUtils
 
     public static function findByCode($areaCode)
     {
-        return self::findFirst($areaCode, 'id');
+        return self::find(intval(trim($areaCode)), 'id');
     }
 
     public static function findByTitle($areaName){
-        return self::findFirst($areaName, 'title');
+        return self::find(trim($areaName), 'title');
     }
 
     /**
@@ -46,8 +46,7 @@ class RegionUtils
             foreach ($ids as $id) {
                 $rows[$id] = new Region(RegionTable::$table[$id]);
             }
-            return $rows;
         }
-        return false;
+        return $rows;
     }
 }
