@@ -1,5 +1,5 @@
 <?php
-
+namespace Yingou\ChinaRegion;
 /**
  * Created by PhpStorm.
  * User: yingouqlj
@@ -8,7 +8,7 @@
  */
 class RegionTable
 {
-
+    const COLUMN_ID = 'id';
     public static $table = [
         ['id' => 110000, 'name' => '北京', 'title' => '北京市', 'parent_id' => 000000],
         ['id' => 120000, 'name' => '天津', 'title' => '天津市', 'parent_id' => 000000],
