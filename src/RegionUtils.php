@@ -17,7 +17,7 @@ class RegionUtils
 
     public static function findByTitle($areaName)
     {
-        return self::find(trim($areaName), RegionTable::COLUMN_NAME);
+        return self::findFirst(trim($areaName), RegionTable::COLUMN_TITLE);
     }
 
     public static function listSubNode($areaCode){
