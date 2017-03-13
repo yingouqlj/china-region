@@ -36,7 +36,7 @@ class ImportRegion
             if (mb_strlen($title)>2) {
                 if (mb_substr($title, -2, 2) == '地区') {
                     $name = mb_substr($title, 0, -2);
-                } elseif (in_array(mb_substr($title, -1, 1), ['市', '区', '县'])) {
+                } elseif (in_array(mb_substr($title, -1, 1), ['市', '区', '县'])&&!in_array(mb_substr($title, -2, 2),['新区','矿区','坝区','坡区'])) {
                     $name = mb_substr($title, 0, -1);
                 }
             }
@@ -76,7 +76,7 @@ EOF;
     public static function varDump()
     {
         foreach (self::makeData() as $row) {
-            echo "['id' => '{$row['id']}', 'name' => '{$row['name']}', 'title' => '{$row['title']}', 'parent_id' => {$row['parent_id']}]," . PHP_EOL;
+            echo "['id' => {$row['id']}, 'name' => '{$row['name']}', 'title' => '{$row['title']}', 'parent_id' => {$row['parent_id']}]," . PHP_EOL;
         }
     }
 }
