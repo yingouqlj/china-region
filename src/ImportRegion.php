@@ -32,13 +32,13 @@ class ImportRegion
             } else {
                 $parentId = substr($id, 0, 4) . '00';
             }
-            $name = null;
-            if (substr($title, -2, 2) == '地区') {
-                $name = substr($title, 0, -2);
-            } elseif (in_array(substr($title, -1, 1), ['市', '区', '县'])) {
-                $name = substr($title, 0, -1);
-            } else {
-                $name = $title;
+            $name = $title;
+            if (mb_strlen($title)>2) {
+                if (mb_substr($title, -2, 2) == '地区') {
+                    $name = mb_substr($title, 0, -2);
+                } elseif (in_array(mb_substr($title, -1, 1), ['市', '区', '县'])) {
+                    $name = mb_substr($title, 0, -1);
+                }
             }
             if (empty($parentId) || empty($name)) {
                 throw new \Exception($id, $title);
