@@ -9,6 +9,9 @@ namespace Yingou\ChinaRegion;
 class RegionTable
 {
     const COLUMN_ID = 'id';
+    const COLUMN_NAME = 'name';
+    const COLUMN_TITLE = 'title';
+    const COLUMN_PARENT_ID = 'parent_id';
     public static $table = [
         ['id' => 110000, 'name' => '北京', 'title' => '北京市', 'parent_id' => 000000],
         ['id' => 110100, 'name' => '市辖', 'title' => '市辖区', 'parent_id' => 110000],

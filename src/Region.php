@@ -19,10 +19,10 @@ class Region
         if (!count($row) > 4) {
             throw new \Exception('area row error');
         }
-        $this->id = $row['id'];
-        $this->name = $row['name'];
-        $this->title = $row['title'];
-        $this->parentId = $row['parent_id'];
+        $this->id = $row[RegionTable::COLUMN_ID];
+        $this->name = $row[RegionTable::COLUMN_NAME];
+        $this->title = $row[RegionTable::COLUMN_TITLE];
+        $this->parentId = $row[RegionTable::COLUMN_PARENT_ID];
     }
 
     public function getId()

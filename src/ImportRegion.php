@@ -33,10 +33,10 @@ class ImportRegion
                 $parentId = substr($id, 0, 4) . '00';
             }
             $name = $title;
-            if (mb_strlen($title)>2) {
+            if (mb_strlen($title) > 2) {
                 if (mb_substr($title, -2, 2) == '地区') {
                     $name = mb_substr($title, 0, -2);
-                } elseif (in_array(mb_substr($title, -1, 1), ['市', '区', '县'])&&!in_array(mb_substr($title, -2, 2),['新区','矿区','坝区','坡区'])) {
+                } elseif (in_array(mb_substr($title, -1, 1), ['市', '区', '县']) && !in_array(mb_substr($title, -2, 2), ['新区', '矿区', '坝区', '坡区'])) {
                     $name = mb_substr($title, 0, -1);
                 }
             }

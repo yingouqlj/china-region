@@ -12,11 +12,16 @@ class RegionUtils
 
     public static function findByCode($areaCode)
     {
-        return self::find(intval(trim($areaCode)), 'id');
+        return self::findFirst(intval(trim($areaCode)), RegionTable::COLUMN_ID);
     }
 
-    public static function findByTitle($areaName){
-        return self::find(trim($areaName), 'title');
+    public static function findByTitle($areaName)
+    {
+        return self::find(trim($areaName), RegionTable::COLUMN_NAME);
+    }
+
+    public static function listSubNode($areaCode){
+        return self::find(intval(trim($areaCode)), RegionTable::COLUMN_PARENT_ID);
     }
 
     /**
@@ -27,7 +32,7 @@ class RegionUtils
     protected static function findFirst($value, $column = RegionTable::COLUMN_ID)
     {
         $row = array_search($value, array_column(RegionTable::$table, $column));
-        if($row){
+        if ($row) {
             return new Region(RegionTable::$table[$row]);
         }
         return false;
